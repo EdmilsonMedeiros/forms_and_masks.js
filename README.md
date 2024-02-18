@@ -4,12 +4,20 @@
 
 <code>
 formatarMoedaReais(field_id)
-
-formatarCPF(field_id)
-
-formatarCNPJ(field_id)
-
-formatarCelular(field_id)
-
-verificarSenhas(field_id, field_id2)
 </code>
+
+<code>
+formatarCPF(field_id)
+</code
+
+<code>
+formatarCNPJ(field_id)
+</code>
+
+<code>
+formatarCelular(field_id)
+</code>
+
+<code>
+verificarSenhas(field_id, field_id2)
+<code>
