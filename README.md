@@ -2,6 +2,7 @@
 
 ## Chamar o evento oninput e função a ser utilizada no elemento passando os respectivos parâmetros
 
+<code>
 formatarMoedaReais(field_id)
 
 formatarCPF(field_id)
@@ -11,3 +12,4 @@ formatarCNPJ(field_id)
 formatarCelular(field_id)
 
 verificarSenhas(field_id, field_id2)
+</code>
