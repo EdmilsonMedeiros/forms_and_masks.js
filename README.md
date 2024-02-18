@@ -4,11 +4,11 @@
 
   ### formatarMoedaReais(field_id)
   
-  formatarCPF(field_id)
+  ### formatarCPF(field_id)
   
-  formatarCelular(field_id)
+  ### formatarCelular(field_id)
   
-  formatarCNPJ(field_id)
+  ### formatarCNPJ(field_id)
   
-  verificarSenhas(field_id, field_id2)
+  ### verificarSenhas(field_id, field_id2)
 
