@@ -20,4 +20,4 @@ formatarCelular(field_id)
 
 <code>
 verificarSenhas(field_id, field_id2)
-<code>
+</code>
