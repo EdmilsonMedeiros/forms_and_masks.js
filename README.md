@@ -1,4 +1,5 @@
-# forms_and_masks.js ## Chamar o evento oninput e função a ser utilizada no elemento passando os respectivos parâmetros
+# forms_and_masks.js 
+## Chamar o evento oninput e função a ser utilizada no elemento passando os respectivos parâmetros
 
   ### formatarMoedaReais(field_id)
   
