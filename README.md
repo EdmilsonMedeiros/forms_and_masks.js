@@ -2,7 +2,7 @@
 
 ## Chamar o evento oninput e função a ser utilizada no elemento passando os respectivos parâmetros
 
-  !! formatarMoedaReais(field_id)
+  ### formatarMoedaReais(field_id)
   
   formatarCPF(field_id)
   
