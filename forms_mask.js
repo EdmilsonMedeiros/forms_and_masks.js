@@ -105,20 +105,32 @@ function formatarCelular(field_id) {
  * |--> field_id2   --> campo de validação de senha.
  ****************************************************/
 function verificarSenhas(field_id, field_id2) {
-    // Obtém o valor do input
+    // Obtém os elementos dos campos de senha e a div onde a mensagem será exibida
     let senha = document.getElementById(field_id);
     let confirmarSenha = document.getElementById(field_id2);
+    let mensagemErro = document.getElementById(field_id2 + '_erro');
 
     if (senha.value !== confirmarSenha.value) { 
-        // Se as senhas forem diferentes deixa o texto vermelho
+        // Se as senhas forem diferentes, mostra a mensagem de erro e deixa o texto vermelho
         confirmarSenha.style.color = 'red';
         senha.style.color = 'red';
+        if (!mensagemErro) { // Se a mensagem de erro ainda não existir, cria ela
+            mensagemErro = document.createElement('span');
+            mensagemErro.id = field_id2 + '_erro';
+            mensagemErro.style.color = 'red';
+            mensagemErro.textContent = 'As senhas estão diferentes';
+            confirmarSenha.parentNode.insertBefore(mensagemErro, confirmarSenha.nextSibling); // Insere a mensagem após o campo de confirmação de senha
+        }
     } else { 
-        // Se as senhas forem iguais remove o texto vermelho
+        // Se as senhas forem iguais, remove o texto vermelho e a mensagem de erro, se existir
         senha.style.color = '';
         confirmarSenha.style.color = '';
+        if (mensagemErro) {
+            mensagemErro.parentNode.removeChild(mensagemErro); // Remove a mensagem de erro
+        }
     }
 }
+
 
 /*******************************
  * Exibir texto float em reais
