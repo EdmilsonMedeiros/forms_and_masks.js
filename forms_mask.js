@@ -1,6 +1,9 @@
-/****************************************************************************************************
- * Chamar o evento oninput e função a ser utilizada no elemento passando os respectivos parâmetros
- * **************************************************************************************************/
+/************************************************************************************************************************
+ * Chamar o evento oninput/@input e função a ser utilizada no elemento passando os respectivos parâmetros               *
+ *                                                                                                                      *
+ * No vuejs, descomentar o export no final deste arquivo e importar as funções em cada componente onde serão utilizadas.*
+ * import {formatarMoedaReais, formatarCPF, formatarCNPJ, formatarCelular..} from '@/forms_mask.js';                    *
+ * *********************************************************************************************************************/
 
 
 /*****************************
@@ -117,4 +120,53 @@ function verificarSenhas(field_id, field_id2) {
     }
 }
 
-export { formatarMoedaReais, formatarCPF, formatarCNPJ, formatarCelular, verificarSenhas };
+/*******************************
+ * Exibir texto float em reais
+ *******************************/
+function exibirTextoFloatEmReais(classe) {
+    // Seleciona todos os elementos com a classe fornecida
+    var elementos = document.getElementsByClassName(classe);
+
+    // Percorre todos os elementos selecionados
+    for (var i = 0; i < elementos.length; i++) {
+        var conteudo = elementos[i].textContent; // Obtém o conteúdo do elemento
+        // Aplica a máscara de reais
+        var valorFormatado = parseFloat(conteudo).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        // Define o conteúdo do elemento como o valor formatado
+        elementos[i].textContent = valorFormatado;
+    }
+}
+
+/***************************************************************
+ * Converte datas em texto no padrão americano para o padrão BR
+ ***************************************************************/
+function exibirTextoDataEmBR(classe) {
+    // Seleciona todos os elementos com a classe fornecida
+    var elementos = document.getElementsByClassName(classe);
+
+    // Percorre todos os elementos selecionados
+    for (var i = 0; i < elementos.length; i++) {
+        var textoData = elementos[i].textContent.trim(); // Obtém o texto da data e remove espaços em branco
+
+        // Verifica se o texto da data está no formato americano
+        if (textoData.match(/^\d{4}-\d{2}-\d{2}( \d{2}:\d{2}:\d{2})?$/)) {
+            var partes = textoData.split(' '); // Divide o texto da data em partes
+            var dataAmericana = partes[0]; // Obtém a parte da data
+
+            // Se houver parte de hora, mantém, caso contrário, define como vazio
+            var horaAmericana = partes[1] ? ' ' + partes[1] : '';
+
+            // Divide a data em ano, mês e dia
+            var [ano, mes, dia] = dataAmericana.split('-');
+
+            // Formata a data no padrão brasileiro
+            var dataBR = dia + '/' + mes + '/' + ano + horaAmericana;
+
+            // Define o texto do elemento como a data formatada
+            elementos[i].textContent = dataBR;
+        }
+    }
+}
+
+
+// export { formatarMoedaReais, formatarCPF, formatarCNPJ, formatarCelular, verificarSenhas, exibirTextoFloatEmReais, exibirTextoDataEmBR };

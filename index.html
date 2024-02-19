@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="form container p-5">
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="field">Fake Field (R$)</label>
+                <input class="form-control" type="text" name="field" id="field" placeholder="0,00" oninput="formatarMoedaReais('field')" />
+            </div>
+
+            <div class="form-group">
+                <label for="fieldCPF">Fake Field (CPF)</label>
+                <input class="form-control" type="text" name="fieldCPF" id="fieldCPF" placeholder="00.00.00-00" oninput="formatarCPF('fieldCPF')" />
+            </div>
+
+            <div class="form-group">
+                <label for="fieldCNPJ">Fake Field (CNPJ)</label>
+                <input class="form-control" type="text" name="fieldCNPJ" id="fieldCNPJ" placeholder=" 00.000.000/0000-00" oninput="formatarCNPJ('fieldCNPJ')" />
+            </div>
+
+            <div class="form-group">
+                <label for="fieldCelular">Fake Field (Celular)</label>
+                <input class="form-control" type="text" name="fieldCelular" id="fieldCelular" placeholder="(00) 90000-0000" oninput="formatarCelular('fieldCelular')" />
+            </div>
+
+            <div class="form-group">
+                <label for="senha">Fake Field (Senha)</label>
+                <input class="form-control" type="password" name="senha" id="senha" placeholder="*********" oninput="verificarSenhas('senha', 'confirmarSenha')" />
+            </div>
+
+            <div class="form-group">
+                <label for="fieldCelular">Fake Field (Verificação de senha)</label>
+                <input class="form-control" type="password" name="confirmarSenha" id="confirmarSenha" placeholder="*********" oninput="verificarSenhas('senha', 'confirmarSenha')" />
+            </div>
+
+            <br>
+            <div class="form-group">
+                <label for="">Fake Field (Verificação de senha)</label>
+                <hr><br>
+                <h1 class="reais">10.58</h1>
+                <h1 class="reais">1.58</h1>
+                <h1 class="reais">5.98</h1>
+                <h1 class="reais">100380.55</h1>
+            </div>
+
+            <br>
+            <div class="form-group">
+                <label for="">Fake Field (Data)</label>
+                <hr><br>
+                <h1 class="data">2023-06-02</h1><span style="color: #ccc;"> (Sem horas)</span>
+                <h1 class="data">2023-12-16 12:00:01</h1><span style="color: #ccc;"> (Com horas)</span>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+    <script src="forms_mask.js"></script>
+    <script>
+        exibirTextoFloatEmReais('reais');
+        exibirTextoDataEmBR('data');
+    </script>
+</body>
+</html>
