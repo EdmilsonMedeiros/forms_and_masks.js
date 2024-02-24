@@ -11,3 +11,10 @@
   
   ### verificarSenhas(field_id, field_id2)
 
+  ### exibirTextoFloatEmReais(classe)
+
+  ### exibirTextoDataEmBR(classe)
+
+  ### exibirTextoEmMaiuscula(field_id)
+
+  ### capitalizarIniciais()
