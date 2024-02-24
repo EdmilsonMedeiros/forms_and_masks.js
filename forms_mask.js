@@ -180,6 +180,9 @@ function exibirTextoDataEmBR(classe) {
     }
 }
 
+/***************************************************************
+ * Converte o value de um input em maiuscula
+ ***************************************************************/
 function exibirTextoEmMaiuscula(field_id){
     let element = document.getElementById(field_id);
     // Verifica se o elemento passado é um input
@@ -191,6 +194,9 @@ function exibirTextoEmMaiuscula(field_id){
     }
 }
 
+/***************************************************************
+ * Capitaliza o value de um input
+ ***************************************************************/
 function capitalizaIniciais(field_id) {
     let element = document.getElementById(field_id);
     // Verifica se o elemento passado é um input
