@@ -225,5 +225,5 @@ function capitalizaIniciais(field_id) {
 //     exibirTextoFloatEmReais, 
 //     exibirTextoDataEmBR, 
 //     exibirTextoEmMaiuscula,
-//     capitalizaIniciais
+//     capitalizarIniciais
 // };
