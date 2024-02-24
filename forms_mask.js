@@ -180,5 +180,44 @@ function exibirTextoDataEmBR(classe) {
     }
 }
 
+function exibirTextoEmMaiuscula(field_id){
+    let element = document.getElementById(field_id);
+    // Verifica se o elemento passado é um input
+    if (element.tagName === 'INPUT') {
+        // Converte o valor para uppercase
+        element.value = element.value.toUpperCase();
+    } else {
+        console.error('O elemento fornecido não é um input HTML.');
+    }
+}
 
-// export { formatarMoedaReais, formatarCPF, formatarCNPJ, formatarCelular, verificarSenhas, exibirTextoFloatEmReais, exibirTextoDataEmBR };
+function capitalizaIniciais(field_id) {
+    let element = document.getElementById(field_id);
+    // Verifica se o elemento passado é um input
+    if (element.tagName === 'INPUT') {
+        // Divide o valor em palavras
+        let palavras = element.value.split(' ');
+
+        // Capitaliza a primeira letra de cada palavra
+        palavras = palavras.map(function(palavra) {
+            return palavra.charAt(0).toUpperCase() + palavra.slice(1).toLowerCase();
+        });
+
+        // Une as palavras de volta em uma única string e define como valor do elemento
+        element.value = palavras.join(' ');
+    } else {
+        console.error('O elemento fornecido não é um input HTML.');
+    }
+}
+
+// export { 
+//     formatarMoedaReais, 
+//     formatarCPF, 
+//     formatarCNPJ, 
+//     formatarCelular, 
+//     verificarSenhas, 
+//     exibirTextoFloatEmReais, 
+//     exibirTextoDataEmBR, 
+//     exibirTextoEmMaiuscula,
+//     capitalizaIniciais
+// };
